@@ -6,9 +6,11 @@ import { Comic } from 'src/app/models/comic';
   templateUrl: './libreria.component.html',
   styleUrls: ['./libreria.component.css']
 })
+
+
 export class LibreriaComponent implements OnInit {
   public comics: Array<Comic>;
-
+  public fav! : Comic ;
   @ViewChild('cajatitulo') cajatitulo: ElementRef;
   @ViewChild('cajaimagen') cajaimagen: ElementRef;
   @ViewChild('cajadesc') cajadesc: ElementRef;
@@ -57,6 +59,18 @@ export class LibreriaComponent implements OnInit {
 
   agregarComic(): void {
     var tit = this.cajatitulo.nativeElement.value;
-    console.log(tit);
+    var img = this.cajaimagen.nativeElement.value;
+    var desc = this.cajadesc.nativeElement.value;
+    var comic = new Comic(tit, img, desc);
+    this.comics.push(comic);
+  }
+
+  seleccionarFavoritoParent(event: Comic):void{
+    this.fav = event;
+    
+  }
+
+  eliminarComicParent(event: number):void{
+    this.comics.splice(event, 1);
   }
 }

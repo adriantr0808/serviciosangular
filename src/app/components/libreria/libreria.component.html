@@ -1,7 +1,13 @@
 <h1 class='text-center m-4'>Libreria</h1>
 <div class='text-center'>
-  <div class='m-3'>
-    <h3>Agregar Comic</h3>
+  <div *ngIf='fav!' class='favorito m-2 border border-2 border-dark'>
+    <h1>Comic favorito</h1>
+    <h3>{{fav.titulo}}</h3>
+    <img src='{{fav.imagen}}' width='200px'>
+    <h4>{{fav.descripcion}}</h4>
+  </div>
+  <div class='m-3 border border-2 border-dark agregar p-4'>
+    <h3 class='m-3'>Agregar Comic</h3>
     <form #comicForm='ngForm'>
       <label>Titulo: </label>
       <input type="text" class='form-control' #cajatitulo />
@@ -9,10 +15,14 @@
       <input type="text" class="form-control" #cajaimagen />
       <label>Descripcion: </label>
       <input type="text" class="form-control" #cajadesc />
-      <button (click)='agregarComic()'>Agregar Comic</button>
+      <button class='mt-3 btn btn-success' (click)='agregarComic()'>Agregar Comic</button>
     </form>
   </div>
 </div>
-<div *ngFor='let c of comics'>
-  <app-comic [comic]='c'></app-comic>
+<div *ngFor='let c of comics; let i = index' >
+  <app-comic [comic]='c' [index]='i' 
+  (seleccionarFavorito)='seleccionarFavoritoParent($event)'
+  (eliminarComic)='eliminarComicParent($event)'
+  
+  ></app-comic>
 </div>
