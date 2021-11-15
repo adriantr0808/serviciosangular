@@ -1,1 +1,18 @@
-<p>libreria works!</p>
+<h1 class='text-center m-4'>Libreria</h1>
+<div class='text-center'>
+  <div class='m-3'>
+    <h3>Agregar Comic</h3>
+    <form #comicForm='ngForm'>
+      <label>Titulo: </label>
+      <input type="text" class='form-control' #cajatitulo />
+      <label>Imagen: </label>
+      <input type="text" class="form-control" #cajaimagen />
+      <label>Descripcion: </label>
+      <input type="text" class="form-control" #cajadesc />
+      <button (click)='agregarComic()'>Agregar Comic</button>
+    </form>
+  </div>
+</div>
+<div *ngFor='let c of comics'>
+  <app-comic [comic]='c'></app-comic>
+</div>
