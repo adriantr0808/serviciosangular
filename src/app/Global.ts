@@ -1,4 +1,5 @@
 export var Global = {
     urlpersonas: 'https://servicioapipersonasmvcpgs.azurewebsites.net/api/personas',
-    urlempleados: 'https://apiempleadosfullstack.azurewebsites.net'
+    urlempleados: 'https://apiempleadosfullstack.azurewebsites.net',
+    urlseries: 'https://apiseriespersonajes.azurewebsites.net/'
 }

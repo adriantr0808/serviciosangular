@@ -6,6 +6,8 @@ import { ComicsinyeccionComponent } from './components/comicsinyeccion/comicsiny
 import { PersonasapiComponent } from './components/personasapi/personasapi.component';
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
 import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
+import { SeriespracComponent } from './components/seriesprac/seriesprac.component';
+import { PersonajespracComponent } from './components/personajesprac/personajesprac.component';
 const appRoutes: Routes = [
     { path: "", component: HomeComponent },
     { path: "home", component: HomeComponent },
@@ -14,6 +16,8 @@ const appRoutes: Routes = [
     { path: "personas", component: PersonasapiComponent },
     { path: "empleados", component: EmpleadossalarioComponent },
     { path: "empleadosoficio", component: EmpleadosoficioComponent },
+    { path: "seriesprac", component: SeriespracComponent },
+    { path: "personajesprac/:id", component: PersonajespracComponent },
 
 ];
 

@@ -1,0 +1,25 @@
+<h1>Practicando con series</h1>
+<div>
+    <table class='table table-warning table-striped border border-2 border-dark'>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Puntuación</th>
+                <th>Anyo</th>
+                <th>Personajes</th>
+              
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor='let s of series'>
+                <td>{{s.nombre}}</td>
+                <td><img src='{{s.imagen}}' width='200px'/></td>
+                <td>{{s.puntuacion}}</td>
+                <td>{{s.anyo}}</td>
+                <td><a  [routerLink]="['/personajesprac', s.idSerie]" class='btn btn-danger'>Ver personajes</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -17,6 +17,9 @@ import { ServiceEmpleado } from './services/empleado.service';
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
 import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
 import { ServiceEmpleado2 } from './services/empleado2.service';
+import { SeriespracComponent } from './components/seriesprac/seriesprac.component';
+import { ServiceSeries } from './services/series.service';
+import { PersonajespracComponent } from './components/personajesprac/personajesprac.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { ServiceEmpleado2 } from './services/empleado2.service';
     ComicsinyeccionComponent,
     PersonasapiComponent,
     EmpleadossalarioComponent,
-    EmpleadosoficioComponent
+    EmpleadosoficioComponent,
+    SeriespracComponent,
+    PersonajespracComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,7 @@ import { ServiceEmpleado2 } from './services/empleado2.service';
     HttpClientModule,
     routing
   ],
-  providers: [appRoutingProviders, ComicsService, ServicePersonas, ServiceEmpleado, ServiceEmpleado2],
+  providers: [appRoutingProviders, ComicsService, ServicePersonas, ServiceEmpleado, ServiceEmpleado2, ServiceSeries],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
