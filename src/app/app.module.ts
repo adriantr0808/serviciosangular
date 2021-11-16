@@ -8,7 +8,13 @@ import { LibreriaComponent } from './components/libreria/libreria.component';
 import { ComicComponent } from './components/comic/comic.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { appRoutingProviders, routing } from './app.routing';
-
+import { ComicsinyeccionComponent } from './components/comicsinyeccion/comicsinyeccion.component';
+import { ComicsService } from './services/comic.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonasapiComponent } from './components/personasapi/personasapi.component'
+import { ServicePersonas } from './services/personas.service';
+import { ServiceEmpleado } from './services/empleado.service';
+import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
 
 @NgModule({
   declarations: [
@@ -16,15 +22,19 @@ import { appRoutingProviders, routing } from './app.routing';
     HomeComponent,
     LibreriaComponent,
     ComicComponent,
-    MenuComponent
+    MenuComponent,
+    ComicsinyeccionComponent,
+    PersonasapiComponent,
+    EmpleadossalarioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, ComicsService, ServicePersonas, ServiceEmpleado],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,14 +11,19 @@ export class ComicComponent implements OnInit {
   @Input() index!: number;
   @Output() seleccionarFavorito: EventEmitter<any> = new EventEmitter();
   @Output() eliminarComic: EventEmitter<any> = new EventEmitter();
-  
-  seleccionarFavoritoHijo():void{
+  @Output() modificarComic: EventEmitter<any> = new EventEmitter();
+
+  seleccionarFavoritoHijo(): void {
     this.seleccionarFavorito.emit(this.comic);
   }
 
-  eliminarComicHijo():void{
+  eliminarComicHijo(): void {
     console.log(this.index);
-      this.eliminarComic.emit(this.index);
+    this.eliminarComic.emit(this.index);
+  }
+
+  modificarComicHijo(): void {
+    this.modificarComic.emit(this.index);
   }
   constructor() { }
 

@@ -1,0 +1,29 @@
+<h1>Personas</h1>
+<div>
+  <table class='table table-dark'>
+    <thead>
+      <tr>
+        <th>IdPersona</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let p of personas'>
+        <td>
+          {{p.IdPersona}}
+        </td>
+        <td>
+          {{p.Nombre}}
+        </td>
+        <td>
+          {{p.Email}}
+        </td>
+        <td>
+          {{p.Edad}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
