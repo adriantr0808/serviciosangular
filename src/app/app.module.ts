@@ -15,6 +15,8 @@ import { PersonasapiComponent } from './components/personasapi/personasapi.compo
 import { ServicePersonas } from './services/personas.service';
 import { ServiceEmpleado } from './services/empleado.service';
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
+import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
+import { ServiceEmpleado2 } from './services/empleado2.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { EmpleadossalarioComponent } from './components/empleadossalario/emplead
     MenuComponent,
     ComicsinyeccionComponent,
     PersonasapiComponent,
-    EmpleadossalarioComponent
+    EmpleadossalarioComponent,
+    EmpleadosoficioComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { EmpleadossalarioComponent } from './components/empleadossalario/emplead
     HttpClientModule,
     routing
   ],
-  providers: [appRoutingProviders, ComicsService, ServicePersonas, ServiceEmpleado],
+  providers: [appRoutingProviders, ComicsService, ServicePersonas, ServiceEmpleado, ServiceEmpleado2],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
