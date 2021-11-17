@@ -1,0 +1,5 @@
+<h1 class='m-4'>EMPLEADOS</h1>
+<ul class='list-group'>
+  <li class='list-group-item' *ngFor='let e of empleados'><a
+      [routerLink]="['/detalleempleado', e.idEmpleado]">{{e.apellido}}</a></li>
+</ul>

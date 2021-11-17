@@ -1,4 +1,10 @@
 <h1>Personajes</h1>
-<div>
-<p>{{this.personajes.nombre}}</p>
+<div *ngFor='let p of personajes' class='text-md-center'>
+  <div class="card mt-4 text-center" style="width: 18rem;">
+    <img src={{p.imagen}} class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{p.nombre}}</h5>
+
+    </div>
+  </div>
 </div>

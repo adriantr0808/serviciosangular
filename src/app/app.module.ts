@@ -20,6 +20,8 @@ import { ServiceEmpleado2 } from './services/empleado2.service';
 import { SeriespracComponent } from './components/seriesprac/seriesprac.component';
 import { ServiceSeries } from './services/series.service';
 import { PersonajespracComponent } from './components/personajesprac/personajesprac.component';
+import { ListadoempleadosdetalleComponent } from './components/listadoempleadosdetalle/listadoempleadosdetalle.component';
+import { DetallempleadosComponent } from './components/detallempleados/detallempleados.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PersonajespracComponent } from './components/personajesprac/personajesp
     EmpleadossalarioComponent,
     EmpleadosoficioComponent,
     SeriespracComponent,
-    PersonajespracComponent
+    PersonajespracComponent,
+    ListadoempleadosdetalleComponent,
+    DetallempleadosComponent
   ],
   imports: [
     BrowserModule,

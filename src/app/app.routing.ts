@@ -8,6 +8,8 @@ import { EmpleadossalarioComponent } from './components/empleadossalario/emplead
 import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
 import { SeriespracComponent } from './components/seriesprac/seriesprac.component';
 import { PersonajespracComponent } from './components/personajesprac/personajesprac.component';
+import { ListadoempleadosdetalleComponent } from './components/listadoempleadosdetalle/listadoempleadosdetalle.component';
+import { DetallempleadosComponent } from './components/detallempleados/detallempleados.component';
 const appRoutes: Routes = [
     { path: "", component: HomeComponent },
     { path: "home", component: HomeComponent },
@@ -17,6 +19,8 @@ const appRoutes: Routes = [
     { path: "empleados", component: EmpleadossalarioComponent },
     { path: "empleadosoficio", component: EmpleadosoficioComponent },
     { path: "seriesprac", component: SeriespracComponent },
+    { path: "listadoempleados", component: ListadoempleadosdetalleComponent },
+    { path: "detalleempleado/:id", component: DetallempleadosComponent },
     { path: "personajesprac/:id", component: PersonajespracComponent },
 
 ];

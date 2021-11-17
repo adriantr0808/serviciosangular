@@ -10,14 +10,14 @@ import { Personaje } from 'src/app/models/personaje';
 })
 export class PersonajespracComponent implements OnInit {
   public idPer!: number;
-  public personajes!: Array<any>;
+  public personajes!: Array<Personaje>;
   constructor(private _activeRoute: ActivatedRoute, private _service: ServiceSeries) { }
 
   ngOnInit(): void {
-  
+
     this._activeRoute.params.subscribe((params: Params) => {
       //Entre corchetes el nombre del parametro que pusimos en routing
-      if(params['id'] != null){
+      if (params['id'] != null) {
         this.idPer = parseInt(params['id']);
         this._service.getPersonajesById(this.idPer).subscribe(res => {
           this.personajes = res;
